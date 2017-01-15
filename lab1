@@ -1,1 +1,291 @@
 
+
+1. 
+  man -k keyword
+  I typed "man man" and read all then know it.
+
+2.
+  which cp
+  /bin/cp
+  which wc
+  /usr/bin/wc
+
+  I read "man man" and use "man -k path" 
+know that which is to locate a program file in the user's path
+
+3.
+  w - show who is logged on and what they are doing
+  [ - evaluates a conditional expression
+  By using find /bin -name "?" and find /usr/bin -name "?"
+
+4.
+  command:ls -l /usr/bin/emacs
+  get:/usr/bin/emacs -> /etc/alternatives/emacs
+  I learned it from TA class, 
+know that I have to find the link that’s point to. l stands for longer.
+5.
+  g The group permission bits in the original mode of the file
+  s The set-user-ID-on-execution and set-group-ID-on-execution bits.
+  so g+s means it gives the permission to the group to run the executable file. 
+  giving the permission of that file.
+  : set group id on execution
+  o  The other permission bits in the original mode of the file.
+  x  The execute/search bits.
+  so o-x means removing the executable permission 
+for others for some specific files.
+
+  use "man chmod" to find the command.
+
+6.
+  command:find -mtime -504
+  gives the file that data has been changed last three weeks. 504 = 24 * 7 * 3
+  command find -ctime -504
+  gives the file that status has been modified last three weeks.
+
+7.
+  find . -mtime -21 -type d
+  (because at root)
+
+8. 
+  use command:
+  find /usr/bin -type l | wc -l
+  get 96
+  first I use whereis to find the location of find.
+  After knowing /usr/bin/find, I looked up the find man page and 
+  use find /usr/bin -type l | wc -l.
+
+9.
+  use command: cd /usr/lib && ls -lt
+  to know that the oldest file is 
+  -rwxr-xr-x   1 root  wheel    177392  1 14  2016 libz.1.dylib
+  read the man page to know the answer.
+
+10.
+  locale gets its data from localedef(current locale environment),
+  to standard output from LC_* enviroment variables.
+
+11.
+  C-h a sort
+  get: 
+  Buffer-menu-sort              M-x ... RET
+  Sort Tabulated List entries by the column at point.
+  sort-columns                  M-x ... RET
+  Sort lines in region alphabetically by a certain range of columns.
+  sort-fields                   M-x ... RET
+  Sort lines in region lexicographically by the ARGth field of each
+  line.
+  sort-lines                    M-x ... RET
+  Sort lines in region alphabetically; argument means descending
+  order.
+  sort-numeric-fields           M-x ... RET
+  Sort lines in region numerically by the ARGth field of each line.
+  sort-pages                    M-x ... RET
+  Sort pages in region alphabetically; argument means descending
+  order.
+  sort-paragraphs               M-x ... RET
+  Sort paragraphs in region alphabetically; argument means descending
+  order.
+  sort-regexp-fields            M-x ... RET
+  Sort the text in the region region lexicographically.
+  tabulated-list-col-sort       M-x ... RET
+  Sort Tabulated List entries by the column of the mouse click E.
+  tabulated-list-sort           M-x ... RET
+  Sort Tabulated List entries by the column at point.
+
+12.
+  command: C-h k the-command-I-want-to-search
+  get:
+  C-M-a runs the command beginning-of-defun
+  Move backward to the beginning of a defun.
+
+  C-M-b runs the command backward-sexp
+  Move backward across one balanced expression (sexp).
+
+  C-M-c runs the command exit-recursive-edit
+  Exit from the innermost recursive edit or minibuffer.
+
+  C-M-d runs the command down-list
+  Move forward down one level of parentheses.
+
+  C-M-e runs the command end-of-defun
+  Move forward to next end of defun.
+
+  C-M-f runs the command forward-sexp,
+  Move forward across one balanced expression (sexp).
+
+  C-M-g
+  Since it just shows C-g command, I think this command doesn’t exist.
+
+  C-M-h runs the command mark-defun
+  Put mark at end of this defun, point at beginning.
+  The defun marked is the one that contains point or follows point.
+13.
+  command: C-h k C-g
+  get:
+  C-g runs the command keyboard-quit, which is an interactive compiled
+  Lisp function in `simple.el'.
+
+  It is bound to C-g.
+
+  (keyboard-quit)
+
+  Signal a `quit' condition.
+  During execution of Lisp code, this character causes a quit directly.
+  At top-level, as an editor command, this simply beeps.
+
+14.
+  command: C-h f yank
+  get: yank is an interactive compiled Lisp function in `simple.el'.
+  It is bound to C-y, <S-insertchar>, <S-insert>, <menu-bar> <edit>
+  <paste>.
+  (yank &optional ARG)
+  Reinsert ("paste") the last stretch of killed text.
+  so yank is a function that paste the last stretch of killed text.
+15.
+  The difference is tired command gives full path(both current and parent path), 
+  and ls -l doesn’t.
+
+
+
+
+
+
+
+
+
+
+
+key1.txt
+
+
+Exercise 1.1
+1. e m a c s SP e x e r 1 . h t m l Enter 
+2. C-s P u b l i c Enter
+3. C-s L a b o r a t o r y Enter
+4. C-s s e l f - r e f e r e n t i a l Enter
+5. C-s a r r o w Enter
+6. C-e Enter
+7. C-a Enter
+8. use ctrl command
+9. no
+10. C-x C-c
+
+Exercise 1.2
+1. e m a c s SP e x e r 2 . h t m l
+2. M-g g 1 8 Enter 
+   C-a C-k
+3. C-s d e l Enter 
+   C-a C-k
+4. C-s w i k i Enter
+   C-a C-k
+5. I use command C-s ! to find the other two html 
+comments and then delete them.
+command:
+d i f f SP - u SP e x e r 1 . h t m l 
+SP e x e r 2 . h t m l SP > e x e r 2 . d i f f 
+
+Exercise 1.3
+1. e m a c s SP e x e r 3 . h t m l
+2. C-s A s s i g n m e n t M-f M-f Backspace 37
+   C-s A s s i g n m e n t M-f M-f Backspace 37
+3. C-s U T F - 8 Backspace Backspace Backspace 
+Backspace Backspace U S - A S C I I
+4. C-s < / o l > Enter C-a Enter
+5. d i f f SP - u SP e x e r 1 . h t m l SP e x e r 3 . h t m l 
+SP > e x e r 3 . d i f f
+
+Exercise 1.4
+1. c a t SP e x e r 2 . h t m l SP e x e r 2 . d i f f 
+SP > e x e r 4 . h t m l
+2. e m a c s SP e x e r 4 . h t m l
+3. M M-g g 3 8 4 Enter
+   C-f C-SP C-e M-w M C-s p s h Enter
+   C-a C-SP C-e Backspace C-y
+4. M M-g g 3 7 3 Enter
+   C-f C-SP C-e C-n C-n M-w M
+   C-s m i t Enter
+   C-n C-n C-y C-a C-f Backspace C-p C-f 
+Backspace M-g g 3 5 7 Enter
+   C-f C-SP C-n C-n C-n M-w M
+   C-s n t Enter
+   C-n C-n C-y Backspace
+5. M-g g 3 5 8 Enter
+   C-sp
+   M->
+   C-w
+6. C-x u
+7. M-g g 3 5 8 Enter
+   <! - -
+   M->
+   - - >
+8. M-x c o u n t - m a t c h e s Enter 
+   < o l > Enter
+   find 7 
+   M-x r e p l a c e - s t r i n g Enter
+   < o l > Enter
+   < O l > Enter
+9. d i f f SP - u SP e x e r 1 . h t m l 
+SP e x e r 4 . h t m l SP e x e r 4 . d i f f
+
+Exercise 1.5
+1. e m a c s Enter
+   M-x m a k e - d i r e c t o r y SP Enter j u n k Enter
+2. C-x d j u n k SP Enter C-x b h e l l o . c Enter
+   copy file from instruction
+   C-x C-w Enter
+3. M-x c o m p i l e r Enter
+   use command Backspace until delete “make -k”
+   g c c SP -o SP h e l l o SP h e l l o . c Enter
+4. M-x c o m p i l e Enter
+   Delete all the command or use DOWN keystroke, 
+then command: . / h e l l o Enter
+   C-x 0 Enter
+   C-x C-w h e l l o - o u t Enter
+5. C-x i~ k e y 1 . t x t Enter
+-*- mode: compilation; default-directory: "~/junk/" -*-
+Compilation started at Thu Jan 12 16:24:25
+
+./hello
+#include <stdio.h>
+int
+main (void)
+{
+  char n = '\n';
+  char b = '\\';
+  char q = '"';
+  char const *p = "#include <stdio.h>%cint%cmain (void)%c{%c  
+char n = '%cn';%c
+  char \9b = '%c%c';%c  char q = '%c';%c  
+char const *p = %c%s%c;%c
+  printf (p, n, n, n, n, b, \
+n, b, b, n, q, n, q, p, q, n, n, n, n);%c  
+return 0;%c}%c";
+  printf (p, n, n, n, n, b, n, b, b, n, q, 
+n, q, p, q, n, n, n, n);
+  return 0;
+}
+
+Compilation finished at Thu Jan 12 13:17:28
+
+Exercise 1.6
+1. C-x b SP * s c r a t c h * Enter
+2. ( r a n d o m ) C-j
+3. ( s e t q x ( r a n d o m ) ) 
+   ( s e t q y ( r a n d o m ) ) 
+4. ( * SP x SP y )
+5. M ( * SP x SP y) get the same result
+6. No. These random numbers are generated from a "seed". 
+7. There may be overflow.
+MAX = max value
+P = (1 + 2 + 3 + 4 + … + MAX) / (MAX * MAX) = 1/2 + 1/(2 * MAX)
+
+
+
+
+
+
+
+
+
+
+
